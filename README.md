@@ -34,8 +34,10 @@
 [image27]: ./output_images/OriginalForThresh.jpg "Original Image for Thresholding"
 
 ## Introduction
-The goal of this project is to write a software pipeline to identify the vehicles in a video from a front-facing camera on a car. 
-This video shows the result of the project.
+The goal of this project is to write a software pipeline to identify the vehicles in a video from a front-facing camera on a car. To identify the vehicles first the features of car and non-car images will be extracted by using color conversion and histogram of gradient directions. Secondly, these extracted features will be used to train a classifier which will be able to distinguish between car and non-car features. With this classifier in the end the vehicles in the video will be detected.
+
+
+The video below shows the result of this project.
 
 
 ![result video](./result_video.gif) 
