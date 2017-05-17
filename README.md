@@ -18,6 +18,10 @@
 [image11]: ./output_images/AllDetectionSmall.jpg "Small road Image with all bounding boxes"
 [image12]: ./output_images/HeatMap.jpg "Heat Map"
 [image13]: ./output_images/HeatMapBinary.jpg "Heat Map Thresholded"
+[image14]: ./output_images/HOG_Car1.jpg "Car Example for HOG Feature - Part1"
+[image15]: ./output_images/HOG_Car2.jpg "Car Example for HOG Feature - Part2"
+[image16]: ./output_images/HOG_NonCar1.jpg "Non-Car Example for HOG Feature - Part1"
+[image17]: ./output_images/HOG_NonCar2.jpg "Non-Car Example for HOG Feature - Part2"
 
 
 
@@ -75,6 +79,11 @@ Here is an example using the YCrCb color space and HOG parameters of orientation
 The next figure shows an example of a feature extraction of all HOG channels from a car and non-car image using the YCrCb color space and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2).
 
 ![alt text][image1]
+
+![alt text][image14]![alt text][image15]
+
+![alt text][image16]![alt text][image17]
+
 
 ![alt text][image2]
 
