@@ -35,7 +35,6 @@ The video below shows the result of this project.
 ![result video](./result_video.gif) 
 
 
-
 The goals / steps of this project are the following:
 1. Extract image features like color and histogram of gradients
 2. Build and train a classifier with a given data set
