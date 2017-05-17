@@ -72,19 +72,13 @@ To compute color features the following techniques can be used:
 ### 1.2 Compute HOG Features
 
 The scikit-image package has a built in function to extract Histogram of Oriented Gradient features. 
-Here is an example using the YCrCb color space and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2):
-
-
 The next figure shows an example of a feature extraction of all HOG channels from a car and non-car image using the YCrCb color space and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2).
 
-![alt text][image1]
 
 ![alt text][image14]![alt text][image15]
 
 ![alt text][image16]![alt text][image17]
 
-
-![alt text][image2]
 
 
 ## 2. Train a Classifier
@@ -97,13 +91,14 @@ Here is an example of a car and non-car image:
 
 ![alt text][image3]
 
+
 After extracing the features from the images of the data set, the data gets normalized by using sklearn's StandardScaler(). 
 Furthermore the data gets randomly split into train (80%) and test (20%) data. 
 
 
 ### 2.2 Train the Classifier
 
-The extracted features where fed to a Linear Support Vector Machine classifier(SVC). Therefore the SVC model of sklearn with default settings were used. 
+The extracted features where fed to a Linear Support Vector Machine Classifier(SVC). Therefore the SVC model of sklearn with default settings were used. 
 The model were trained with several combinations of feature extraction and diffrent parameters. 
 
 In the end the best result generated an accuracy of 99.35% on the test dataset with the following parameter:
@@ -127,9 +122,6 @@ The trained model and parameters were saved to the pickle file "svc_pickle.p" to
 Now I have extracted features from an image and used them to train a classifier to make a prediction if the given pixels can be classified as a car or a non-car. In the end my trained classifier should detect the cars in the given video. So the next step now is to generate the input pixels for feeding the classifier. 
 First I create a region of interest to decrease area for searching, because I dont have to search for cars in the sky for example. Second I define searching windows approximately in the size of a car. Admittedly, the size of a car is changing very much according to the distance is has to my point of view. To also take this fact into consideration, I implemented three different scaling windows, shown in the figure below.
 
-![alt text][image4]
-
-
 
 ![alt text][image8]![alt text][image9]![alt text][image10]
 
@@ -141,17 +133,14 @@ The detection of cars will be returned as a list of bounding boxes drawn onto th
 ![alt text][image5]
 
 
-
-
 ## 4. Multiple Detections & False Positives
 
 Until now I have a list of all the bounding boxes where my classifier reported positive detections. There are some multiple detections as seen above and also some false detections. To remove the false positives and combine overlapping detections I am going to biuld a heat-map for all pixels within windows where a positive detection is reported. In this heat-map areas of multiple detections get "hot", while transient false positives stay "cool". By thresholding the heat-map I can remove the false positives. With using the the label() function from scipy.ndimage.measurements I can figure out how many cars are in the image and also which pixels belong to which car. 
 Here is a figure showing these steps:
 
-![alt text][image6]
-
 
 ![alt text][image11]![alt text][image12]![alt text][image13]
+
 
 ## 5. Visual Output
 
