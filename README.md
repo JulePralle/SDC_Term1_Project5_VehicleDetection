@@ -76,11 +76,6 @@ The next figure shows an example of a feature extraction of all HOG channels fro
 
 ![alt text][image1]
 
-
-![alt text][image14]![alt text][image15]
-
-![alt text][image16]![alt text][image17]
-
 ![alt text][image2]
 
 
