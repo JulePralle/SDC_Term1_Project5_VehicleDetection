@@ -74,11 +74,14 @@ To compute color features the following techniques can be used:
 The scikit-image package has a built in function to extract Histogram of Oriented Gradient features. 
 The next figure shows an example of a feature extraction of all HOG channels from a car and non-car image using the YCrCb color space and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2).
 
+![alt text][image1]
+
 
 ![alt text][image14]![alt text][image15]
 
 ![alt text][image16]![alt text][image17]
 
+![alt text][image2]
 
 
 ## 2. Train a Classifier
