@@ -79,6 +79,7 @@ The given data set contains 8792 car and 8968 non-car images.
 
 Here is an example of a car and non-car image:
 
+
 ![alt text][image3]
 
 After extracing the features from the images of the data set, the data gets normalized by using sklearn's StandardScaler(). 
