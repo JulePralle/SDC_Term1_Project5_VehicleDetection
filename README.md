@@ -31,6 +31,7 @@ The goal of this project is to write a software pipeline to identify the vehicle
 
 The video below shows the result of this project.
 
+
 ![result video](./result_video.gif) 
 
 
