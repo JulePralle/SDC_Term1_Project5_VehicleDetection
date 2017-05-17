@@ -12,6 +12,13 @@
 [image5]: ./output_images/AllDetection.jpg "Road Image with all bounding boxes"
 [image6]: ./output_images/NoFalseOrMultiple.jpg "False Positives and Multiple Detections"
 [image7]: ./output_images/FinalCarDetection.jpg "Result image of vehicle detection"
+[image8]: ./output_images/FirstMSW.jpg "First Multi-Scale Window"
+[image9]: ./output_images/SecondMSW.jpg "Second Multi-Scale Window"
+[image10]: ./output_images/ThirdMSW.jpg "Third Multi-Scale Window"
+[image11]: ./output_images/AllDetectionSmall.jpg "Small road Image with all bounding boxes"
+[image12]: ./output_images/HeatMap.jpg "Heat Map"
+[image13]: ./output_images/HeatMapBinary.jpg "Heat Map Thresholded"
+
 
 
 ## Introduction
@@ -115,11 +122,18 @@ First I create a region of interest to decrease area for searching, because I do
 ![alt text][image4]
 
 
+![alt text][image8] ![alt text][image9] ![alt text][image10]
+
+
 For every single searching window the features will be extracted the same way as in the training and the classifier will make a prediction. One exception is the HOG feature, here I want to speed things up by extract HOG features just once for the entire region of interest and subsample that array for each sliding window.
 
 The detection of cars will be returned as a list of bounding boxes drawn onto the cars as shown below.
 
 ![alt text][image5]
+
+
+![alt text][image11] ![alt text][image12] ![alt text][image13]
+
 
 ## 4. Multiple Detections & False Positives
 
