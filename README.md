@@ -5,33 +5,14 @@
 ---
 [//]: # (Image References)
 
-[image1]: ./output_images/chess_cornerDraw_undis_12.jpg "Camera Calibration Chessboard"
-[image2]: ./output_images/Undistortion_3.jpg "Undistortion of Image 3"
-[image3]: ./output_images/Undistortion_5.jpg "Undistortion of Image 5"
-[image4]: ./output_images/warp_7.jpg "Perspective Transform of Image 7"
-[image5]: ./output_images/warp_2.jpg "Perspective Transform of Image 2"
-[image6]: ./output_images/gray_and_thresh.jpg "Gray Image and Binary"
-[image7]: ./output_images/RGB_and_thresh.jpg "RGB Channel and Binary"
-[image8]: ./output_images/HLS_and_thresh.jpg "HLS Channel and Binary"
-[image9]: ./output_images/color_stack_thresh.jpg "Combined Color Images and Binary"
-[image10]: ./output_images/sobels_and_magnitude.jpg "Sobelx, Sobely and their magnitude"
-[image11]: ./output_images/direction.jpg "Direction of the Gradient"
-[image12]: ./output_images/allcombined.jpg "Combined Color and Gradient Thresholding"
-[image13]: ./output_images/histogram.jpg "Histogram of Pixels"
-[image14]: ./output_images/SlidingWindows.jpg "Sliding Windows"
-[image15]: ./output_images/SearchWindow.jpg "Searching Windows"
-[image16]: ./output_images/OriginalwithLaneArea.jpg "Warp back onto original image"
-[image17]: ./output_images/ResultImageText_3.jpg "Result of Image 3 with Text"
-[image18]: ./output_images/ResultImageText_5.jpg "Result of Image 5 with Text"
-[image19]: ./output_images/Summary_1.jpg "Summary of Image 1"
-[image20]: ./output_images/Summary_2.jpg "Summary of Image 2"
-[image21]: ./output_images/Summary_3.jpg "Summary of Image 3"
-[image22]: ./output_images/Summary_4.jpg "Summary of Image 4"
-[image23]: ./output_images/Summary_5.jpg "Summary of Image 5"
-[image24]: ./output_images/Summary_6.jpg "Summary of Image 6"
-[image25]: ./output_images/Summary_7.jpg "Summary of Image 7"
-[image26]: ./output_images/Summary_8.jpg "Summary of Image 8"
-[image27]: ./output_images/OriginalForThresh.jpg "Original Image for Thresholding"
+[image1]: ./output_images/HOG_Car.jpg "Car Example for HOG Feature"
+[image2]: ./output_images/HOG_NonCar.jpg "Non-Car Example for HOG Feature"
+[image3]: ./output_images/OriginalCarNonCar.jpg "Example for car and non-car image"
+[image4]: ./output_images/MS_Windows.jpg "Multi-scaling windows"
+[image5]: ./output_images/AllDetection.jpg "Road Image with all bounding boxes"
+[image6]: ./output_images/NoFalseOrMultiple.jpg "False Positives and Multiple Detections"
+[image7]: ./output_images/FinalCarDetection.jpg "Result image of vehicle detection"
+
 
 ## Introduction
 The goal of this project is to write a software pipeline to identify the vehicles in a video from a front-facing camera on a car. To identify the vehicles first the features of car and non-car images will be extracted by using color conversion and histogram of gradient directions. Secondly, these extracted features will be used to train a classifier which will be able to distinguish between car and non-car features. With this classifier in the end the vehicles in the video will be detected.
@@ -77,10 +58,6 @@ To compute color features the following techniques can be used:
   * Converting the color space like RGB, HSV, LUV, HLS, YUV, YCrCb
   * Histograms of color showing the amount of pixels and their position
   
-The figure below shows these color feature techniques with a car and a non-car image in a 32 x 32 pixel resolution, YCrCb color space and the histogram of the color channels.
-
-![alt text][image1]
-
 
 ### 1.2 Compute HOG Features
 
@@ -90,13 +67,15 @@ Here is an example using the YCrCb color space and HOG parameters of orientation
 
 The next figure shows an example of a feature extraction of all HOG channels from a car and non-car image using the YCrCb color space and HOG parameters of orientations=9, pixels_per_cell=(8, 8) and cells_per_block=(2, 2).
 
+![alt text][image1]
+
 ![alt text][image2]
 
 
 ## 2. Train a Classifier
 
 ### 2.1 The Data Set
-The given data set contains XXXX car and XXX non-car images. 
+The given data set contains 8792 car and 8968 non-car images. 
 
 Here is an example of a car and non-car image:
 
@@ -111,7 +90,7 @@ Furthermore the data gets randomly split into train (80%) and test (20%) data.
 The extracted features where fed to a Linear Support Vector Machine classifier(SVC). Therefore the SVC model of sklearn with default settings were used. 
 The model were trained with several combinations of feature extraction and diffrent parameters. 
 
-In the end the best result generated an accuracy of XXXX% on the test dataset with the following parameter:
+In the end the best result generated an accuracy of 99.35% on the test dataset with the following parameter:
 
     color_space = 'YCrCb' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
     orient = 9  # HOG orientations
