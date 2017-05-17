@@ -59,6 +59,7 @@ My project includes the following files:
 To find and detect a vehicle in an image we need to find features which can be easily classified into car and non-car features. To train a classifier we need to feed it with these image features to generate predictions. That means a better feature extraction leads to a higher accurancy of prediction. 
 Therefore the features need to be extracted and well choosen in the first place. There are color features and histogram of gradients features (HOG). 
 
+
 ### 1.1 Compute Color Features
 
 To compute color features the following techniques can be used:
