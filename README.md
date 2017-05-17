@@ -122,7 +122,7 @@ First I create a region of interest to decrease area for searching, because I do
 ![alt text][image4]
 
 
-![alt text][image8] ![alt text][image9] ![alt text][image10]
+![alt text][image8]![alt text][image9]![alt text][image10]
 
 
 For every single searching window the features will be extracted the same way as in the training and the classifier will make a prediction. One exception is the HOG feature, here I want to speed things up by extract HOG features just once for the entire region of interest and subsample that array for each sliding window.
@@ -132,7 +132,6 @@ The detection of cars will be returned as a list of bounding boxes drawn onto th
 ![alt text][image5]
 
 
-![alt text][image11] ![alt text][image12] ![alt text][image13]
 
 
 ## 4. Multiple Detections & False Positives
@@ -141,6 +140,9 @@ Until now I have a list of all the bounding boxes where my classifier reported p
 Here is a figure showing these steps:
 
 ![alt text][image6]
+
+
+![alt text][image11]![alt text][image12]![alt text][image13]
 
 ## 5. Visual Output
 
