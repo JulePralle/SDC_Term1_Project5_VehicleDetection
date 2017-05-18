@@ -18,10 +18,6 @@
 [image11]: ./output_images/AllDetectionSmall.jpg "Small road Image with all bounding boxes"
 [image12]: ./output_images/HeatMap.jpg "Heat Map"
 [image13]: ./output_images/HeatMapBinary.jpg "Heat Map Thresholded"
-[image14]: ./output_images/HOG_Car1.jpg "Car Example for HOG Feature - Part1"
-[image15]: ./output_images/HOG_Car2.jpg "Car Example for HOG Feature - Part2"
-[image16]: ./output_images/HOG_NonCar1.jpg "Non-Car Example for HOG Feature - Part1"
-[image17]: ./output_images/HOG_NonCar2.jpg "Non-Car Example for HOG Feature - Part2"
 
 
 
@@ -29,10 +25,10 @@
 The goal of this project is to write a software pipeline to identify the vehicles in a video from a front-facing camera on a car. To identify the vehicles first the features of car and non-car images will be extracted by using color conversion and histogram of gradient directions. Secondly, these extracted features will be used to train a classifier which will be able to distinguish between car and non-car features. With this classifier in the end the vehicles in the video will be detected.
 
 
-The video below shows the result of this project.
+The video below shows the result of this project combined with the Advanced Lane Line Detection project.
 
 
-![result video](./result_video.gif) 
+![result video](./result_video_LLandVD.gif) 
 
 
 The goals / steps of this project are the following:
@@ -149,6 +145,8 @@ The visual output will show the result of the vehicle detection in form of bound
 ## 6. Pipeline
 
 After I applied a feature extraction, the searching window technique and removed the false positives and combined overlapping detections to the test images I detected the vehicles and draw bounding boxes and the result onto the original image. Now, I need to create a pipeline which executes all those steps. In the end I just need to run the pipeline to detect vehicles in a given video and output a new video showing the results.
+
+![result video](./result_video.gif) 
 
 
 ## 7. Discussion
