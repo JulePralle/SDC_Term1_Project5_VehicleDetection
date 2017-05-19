@@ -45,6 +45,7 @@ The goals / steps of this project are the following:
 My project includes the following files:
 * VehicleDetection.ipynb: Notebook, containing the code 
 * result_video.gif: Video, showing the detected vehicles
+* result_videoLLandVH.gif: Video, showing the advanced lane line and vehicle detection combined (project4 + projekt5)
 * README.md: This report for summarizing the results
 * output_images: Folder, containing all the images in this report 
 * svc_pickle.p: Pickle file, containing the trained classifier and parameter
