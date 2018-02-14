@@ -1,8 +1,9 @@
-# **Self-Driving Car Engineer - Nanodegree** 
-## ---Computer Vision---
+
 # Vehicle Detection
+Self-Driving Car Engineer Nanodegree Program
 
 ---
+
 [//]: # (Image References)
 
 [image1]: ./output_images/HOG_Car.jpg "Car Example for HOG Feature"
@@ -28,7 +29,7 @@ The goal of this project is to write a software pipeline to identify the vehicle
 The video below shows the result of this project combined with the Advanced Lane Line Detection project.
 
 
-[Video Link](https://youtu.be/PBefvy4slDo)
+![result_video_LLandVD](./result_video_LLandVD.gif) 
 
 
 
@@ -148,7 +149,7 @@ The visual output will show the result of the vehicle detection in form of bound
 
 After I applied a feature extraction, the searching window technique and removed the false positives and combined overlapping detections to the test images I detected the vehicles and draw bounding boxes and the result onto the original image. Now, I need to create a pipeline which executes all those steps. In the end I just need to run the pipeline to detect vehicles in a given video and output a new video showing the results.
 
-[Video Link](https://youtu.be/EUILFPPIfAA)
+![result_video](./result_video.gif) 
 
 
 ## 7. Discussion
