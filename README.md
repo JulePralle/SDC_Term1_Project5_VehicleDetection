@@ -152,6 +152,7 @@ After I applied a feature extraction, the searching window technique and removed
 ![result_video](./result_video.gif)
 
 
+
 ## 7. Discussion
 In this project I experiences how well the features extraction must be choosen to generate an appropriate prediction accurancy of the classifier. Also generating the inbput pixels for the classifier by defining the dimension and parameter of the searching windows can have a hughe impact. That means, to have a good car detection the input while training and running a classifier is crucial.
 
