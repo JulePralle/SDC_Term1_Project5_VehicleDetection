@@ -149,7 +149,7 @@ The visual output will show the result of the vehicle detection in form of bound
 
 After I applied a feature extraction, the searching window technique and removed the false positives and combined overlapping detections to the test images I detected the vehicles and draw bounding boxes and the result onto the original image. Now, I need to create a pipeline which executes all those steps. In the end I just need to run the pipeline to detect vehicles in a given video and output a new video showing the results.
 
-![result_video](./result_video.gif) 
+![result_video](./result_video.gif)
 
 
 ## 7. Discussion
